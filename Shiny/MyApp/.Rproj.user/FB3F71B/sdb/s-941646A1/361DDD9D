@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nshinyServer(function(input, output) {\n  output$diagonalone<-renderPrint({\n    paste0('a(1.1)*a(2.2)*a(3.3) = ',input$a11*input$a22*input$a33)\n  })\n  output$firsttriangle<-renderPrint({\n    paste0('a(1.2)*a(2.3)*a(3.1) = ',input$a12*input$a23*input$a31)\n  })\n  output$secondtriangle<-renderPrint({\n    paste0('a(3.3)*a(2.1)*a(3.2) = ',input$a33*input$a21*input$a32)\n  })\n  output$diagonaltwo<-renderPrint({\n    paste0('a(1.3)*a(2.2)*a(3.1) = ',input$a13*input$a22*input$a31)\n  })\n  output$thirdtriangle<-renderPrint({\n    paste0('a(1.2)*a(2.1)*a(3.3) = ',input$a12*input$a21*input$a33)\n  })\n  output$fourtriangle<-renderPrint({\n    paste0('a(1.1)*a(2.3)*a(3.2) = ',input$a11*input$a23*input$a32)\n  })\n  output$functio<-renderPrint({\n    'a(1.1)*a(2.2)*a(3.3)+a(1.2)*a(2.3)*a(3.1)+a(3.3)*a(2.1)*a(3.2)-a(1.3)*a(2.2)*a(3.1)-a(1.2)*a(2.1)*a(3.3)-a(1.1)*a(2.3)*a(3.2)'\n  })\n\n  output$viznachnik<-renderPrint({\n    paste0('Визначник : ',input$a11*input$a22*input$a33+input$a12*input$a23*input$a31+input$a33*input$a21*input$a32-input$a13*input$a22*input$a31-input$a12*input$a21*input$a33-input$a11*input$a23*input$a32)\n  })\n  output$graph <- renderPlot({\n    xVizn <- input$a11*input$a22*input$a33+input$a12*input$a23*input$a31+input$a33*input$a21*input$a32-input$a13*input$a22*input$a31-input$a12*input$a21*input$a33-input$a11*input$a23*input$a32\n    x1<-xVizn-10\n    x2<- xVizn+10\n    x<-x1:x2\n      y <- x\n      plot(x, y,type = \"l\")\n      grid()\n    \n  })\n})",
+    "created" : 1481227463794.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2671393606",
+    "id" : "361DDD9D",
+    "lastKnownWriteTime" : 1481280956,
+    "last_content_update" : 1481280956843,
+    "path" : "C:/Users/Igoruch/Desktop/Shiny/MyApp/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

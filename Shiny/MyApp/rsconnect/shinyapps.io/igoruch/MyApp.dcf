@@ -1,0 +1,9 @@
+name: MyApp
+account: igoruch
+server: shinyapps.io
+appId: 143521
+bundleId: 642086
+url: https://igoruch.shinyapps.io/MyApp/
+when: 1481281621.07257
+asMultiple: FALSE
+asStatic: FALSE
